@@ -1,0 +1,23 @@
+<div class="container"
+     ng-show="!ratingStore.ratingSubmitted || !(ratingStore.storeRatingSubmitted || !(ratingStore.ratingSubmitted && ratingStore.starsGiven === '5'))">
+    <div class="alert alert-info text-center">
+        <div collapse="ratingStore.ratingSubmitted">
+            <p collapse="progress.rate" style="margin-bottom: 0">
+                {{"Please Let Us Know How We're Doing." | translate}}
+            </p>
+            <stars></stars>
+            <div ng-show="progress.rate">
+                <hr>
+                <button class="btn btn-success" ng-click="ratingReceived()">
+                    {{ 'submit' | translate}}
+                </button>
+            </div>
+        </div>
+
+        <div collapse="ratingStore.storeRatingSubmitted || !(ratingStore.ratingSubmitted && ratingStore.starsGiven === '5')">
+            {{'Thank you for your feedback. If you have time, please rate us in the Chrome Store.' | translate}}
+            <hr>
+            <button class="btn btn-success" data-ng-click="openRatingsPage()">{{ 'Rate Extension' | translate}}</button>
+        </div>
+    </div>
+</div>

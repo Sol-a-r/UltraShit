@@ -1,0 +1,17 @@
+#logo {
+    margin-bottom: 5px;
+    margin-left: 18%;
+    margin-top: 4px;
+}
+
+#logo img {
+    height: 46px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+#body {
+    min-width: 500px;
+}
