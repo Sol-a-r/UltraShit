@@ -1,0 +1,10 @@
+<div>
+    <div ng-show="dontRequestRating || (ratingStore.storeRatingSubmitted || (ratingStore.ratingSubmitted && ratingStore.starsGiven !== '5'))">
+        <p class="text-center">
+            {{ 'Thank you for using UltraSurf.' | translate }}
+        </p>
+    </div>
+    <div ng-hide="dontRequestRating || (ratingStore.storeRatingSubmitted || (ratingStore.ratingSubmitted && ratingStore.starsGiven !== '5'))">
+        <review-request></review-request>
+    </div>
+</div>
